@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "OtherList";
+}
+
+@model IEnumerable<TopFive.Models.OtherRestaurant>
+
+<h2 class="text-light">Restaurant suggestions from other users:</h2>
+
+<ul class="list-group rounded">
+    @foreach (TopFive.Models.OtherRestaurant r in Model)
+    {
+        <li class="list-group-item">
+            <ul class="list-group rounded">
+                <li class="list-group-item">Name: @r.Name</li>
+                <li class="list-group-item">Restaurant: @r.RestaurantName</li>
+                <li class="list-group-item">Favorite Dish: @r.FavoriteDish</li>
+                <li class="list-group-item">Phone Number: @r.PhoneNumber</li>
+            </ul>
+        </li>
+    }
+</ul>
+

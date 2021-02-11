@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewData["Title"] = "New Suggestion";
+}
+
+@model TopFive.Models.OtherRestaurant 
+
+<h1 class="text-light">Submit Restaurant Suggestion</h1>
+
+<form asp-action="AddRestaurant" class="form-group" method="post">
+    <div>
+        <label asp-for="Name" class="text-light">Your Name:</label>
+        <input type="text" name="Name" asp-for="Name" class="form-control" required />
+    </div>
+    <div>
+        <label asp-for="RestaurantName" class="text-light">Restaurant Name:</label>
+        <input type="text" name="RestaurantName" asp-for="RestaurantName" class="form-control" required />
+    </div>
+    <div>
+        <label asp-for="FavoriteDish" class="text-light">Favorite Dish:</label>
+        <input type="text" name="FavoriteDish" asp-for="FavoriteDish" class="form-control" required />
+    </div>
+    <div>
+        <label asp-for="PhoneNumber" class="text-light">Phone Number:</label>
+        <input type="text" name="PhoneNumber" asp-for="PhoneNumber" class="form-control" required />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Add to List</button>
+</form>
